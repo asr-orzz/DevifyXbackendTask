@@ -12,7 +12,7 @@ dotenv.config()
 import mongoose from "mongoose";
 
 const app = express();
-
+app.use(express.json());
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/decks', deckRoutes);
 app.use('/api/v1/flashcards', flashcardRoutes);
